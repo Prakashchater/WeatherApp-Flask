@@ -2,7 +2,7 @@
 
 html,
 body {
-    height: 100%
+    height: 100%;
 }
 
 * {
@@ -17,35 +17,42 @@ body {
 }
 
 .card {
-    background-color: #ffffff;
+    background-image: linear-gradient(to right, #caf7e3, #4ca1a3);
     border-radius: 50px;
-    color: #6f707d;
+    color: #161616;
     font-family: 'Marcellus', serif
+}
+
+.time{
+    margin-left: 75%;
 }
 
 #heading {
     font-size: 55px;
-    color: #2b304d
+    color: rgb(46, 29, 29);
 }
 
 .temp {
-    place-items: center
+    place-items: center;
 }
 
 .temp-details>p>span,
 .grey {
-    color: #a3acc1;
-    font-size: 12px
+    color: #4a4d55;
+    font-size: 12px;
 }
 
-.fa {
-    color: #a5a5b1
-}
-
-*:focus {
-    outline: none
+.temperature{
+    font-size: 11px;
+    position: relative;
 }
 
 .time{
     text-align: right;
+}
+
+.weather-icon{
+    position: relative;
+    bottom: 20px;
+    left: 200px;
 }

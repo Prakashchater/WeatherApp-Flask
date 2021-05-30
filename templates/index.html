@@ -36,6 +36,13 @@
     <title>Weather Forecast</title>
   </head>
   <body>
+    <div class="">
+      <form method="POST">
+        <input type="text" name="city" placeholder="Enter city" autocomplete="off">
+        <input type="submit" value="Add City">
+      </form>
+    </div>
+    {% if weather: %}
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12 col-md-4 col-sm-12 col-xs-12">
@@ -52,22 +59,24 @@
             </div>
             <div class="d-flex">
               <div class="temp-details flex-grow-1">
-                <p class="my-1">
+                <div class="temperature">
+                  <p class="my-1">
                     <i class="fas fa-temperature-high" aria-hidden="true"></i>
-                  <span> {{weather.max_temp}}° C</span>
-                  <i class="fas fa-temperature-low" aria-hidden="true"></i>
-                  <span> {{weather.min_temp}}° C</span>
-                </p>
+                    <span> {{weather.max_temp}}° C</span> /
+                    <i class="fas fa-temperature-low" aria-hidden="true"></i>
+                    <span> {{weather.min_temp}}° C</span>
+                  </p>
+                </div>
                 <p class="my-1">
-                  <i class="fa fa-tint mr-2" aria-hidden="true"></i>
+                  <i class="fas fa-tint" aria-hidden="true"></i>
                   <span> {{weather.humidity}}%</span>
                 </p>
                 <p class="my-1">
-                    <i class="fas fa-sun"></i>
+                  <i class="fas fa-sun"></i>
                   <span> 0.2h </span>
                 </p>
               </div>
-              <div>
+              <div class="weather-icon">
                 <img
                   src="http://openweathermap.org/img/w/{{ weather.icon }}.png"
                   alt="image"
@@ -79,6 +88,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
