@@ -11,6 +11,15 @@
 
     <link rel="stylesheet" href="static/styles.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma-rtl.min.css"
+    />
+
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -36,13 +45,19 @@
     <title>Weather Forecast</title>
   </head>
   <body>
-    <div class="">
+    <div class="search">
       <form method="POST">
-        <input type="text" name="city" placeholder="Enter city" autocomplete="off">
-        <input type="submit" value="Add City">
+        <input
+          class="search-box"
+          type="text"
+          name="city"
+          placeholder="Enter city"
+          autocomplete="off"
+        />
+        <button class="btn" type="submit">Add City</button>
       </form>
     </div>
-    {% if weather: %}
+    <!-- {% if weather: %} -->
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12 col-md-4 col-sm-12 col-xs-12">
@@ -88,7 +103,7 @@
         </div>
       </div>
     </div>
-    {% endif %}
+    <!-- {% endif %} -->
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
