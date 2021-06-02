@@ -37,6 +37,9 @@
   </head>
   <body>
     <div class="search">
+      {%if error:%}
+      <h1>Enter a valid city!</h1>
+      {%endif%}
       <form method="POST">
         <input
           class="search-box"
@@ -48,7 +51,7 @@
         <button class="btn" type="submit">Add City</button>
       </form>
     </div>
-    <!-- {% if weather: %} -->
+    {% if weather: %}
     <div class="container-fluid">
       <div class="row justify-content-center">
         <div class="col-12 col-md-4 col-sm-12 col-xs-12">
@@ -94,7 +97,7 @@
         </div>
       </div>
     </div>
-    <!-- {% endif %} -->
+    {% endif %}
   </body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
