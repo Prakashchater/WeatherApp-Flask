@@ -20,11 +20,12 @@ body {
     background-image: linear-gradient(to right, #caf7e3, #4ca1a3);
     border-radius: 50px;
     color: #161616;
-    font-family: 'Marcellus', serif
+    font-family: 'Marcellus', serif;
+    margin-bottom: 70px;
 }
 
 .time{
-    margin-left: 75%;
+    padding-left: 70%;
 }
 
 #heading {
@@ -47,9 +48,9 @@ body {
     position: relative;
 }
 
-.time{
-    text-align: right;
-}
+/* .time{
+    margin-left: 200px;
+} */
 
 .weather-icon{
     position: relative;
