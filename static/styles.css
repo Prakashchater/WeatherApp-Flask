@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
 
 html,
 body {
@@ -11,9 +12,14 @@ body {
 }
 
 body {
-    /* background-color: #b1a5b1; */
+    /* background-color: #ac66cc; */
     display: grid;
     place-items: center
+}
+
+.correct , .incorrect{
+    font-family: 'Playfair Display', serif;
+    padding-bottom: 10px;
 }
 
 .card {
@@ -58,7 +64,7 @@ body {
     left: 200px;
 }
 
-.btn {
+/* .btn {
     background: #3498db;
     background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
     background-image: -moz-linear-gradient(top, #3498db, #2980b9);
@@ -78,9 +84,9 @@ body {
   .btn:hover {
     background: #3cb0fd;
     text-decoration: none;
-  }
+  } */
   
-  .search-box{
+  /* .search-box{
       height: 2;
       
-  }
+  } */
