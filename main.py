@@ -6,13 +6,7 @@ from datetime import datetime
 weather_api_key = "592dd33a1092d9eca5c1b173c4d88ee9"
 
 app = Flask(__name__)
-
-
-def get_weather_data(city):
-    weather_url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid=592dd33a1092d9eca5c1b173c4d88ee9"
-    response = requests.get(url=weather_url)
-    return response
-
+app.config['SECRET_KEY'] = "QWERTYUIOPLKJHGFDSA"
 
 @app.route('/', methods=["GET", "POST"])
 def home():
@@ -36,6 +30,7 @@ def home():
             return render_template('index.html', weather=weather, error=error)
         else:
             error=True
+            flash(message="Enter a Valid city")
             return render_template('index.html', weather=weather, error=error)
     return render_template('index.html', weather=weather, error=error)
 

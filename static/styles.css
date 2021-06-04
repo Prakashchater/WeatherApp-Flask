@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
 
 html,
 body {
@@ -14,13 +15,37 @@ body {
 body {
     /* background-color: #ac66cc; */
     display: grid;
-    place-items: center
+    /* place-items: center */
 }
 
-.correct , .incorrect{
+.title-correct{
+    font-family: 'Odibee Sans', cursive;
+    padding: 20px;
+    color: whitesmoke;
+    background-color: #4ca1a3;
+    letter-spacing: 3px;
+}
+
+.correct{
+    padding-left: 40%;
+    margin-top: 3%;
+}
+
+.title-incorrect{
+    font-family: 'Playfair Display', serif;
+    padding: 10px;
+}
+
+.incorrect{
+    margin-left: 40%;
+}
+
+
+
+/* .correct , .incorrect{
     font-family: 'Playfair Display', serif;
     padding-bottom: 10px;
-}
+} */
 
 .card {
     background-image: linear-gradient(to right, #caf7e3, #4ca1a3);

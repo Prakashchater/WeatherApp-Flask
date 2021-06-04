@@ -40,14 +40,16 @@
       integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
       crossorigin="anonymous"
     />
-
+    <!-- FAVICON ICON -->
+    <link rel=" shortcut icon" type="image/png" href="static/clouds.ico">
+    
     <title>Weather Forecast</title>
   </head>
   <body>
-    <div class="search">
-      <form method="POST">
-        {%if error:%}
-        <h1 class="incorrect">Enter a valid city!</h1>
+    <form method="POST">
+      {%if error:%}
+      <div class="incorrect">
+        <h3 class="title-incorrect">Enter a valid city!</h3>
         <div class="input-group">
           <div class="form-outline">
             <input
@@ -63,11 +65,12 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
-      </form>
-      {%else%}
-      <form method="POST">
-        <h1 class="correct">Enter a city!</h1>
-        <div class="input-group">
+      </div>
+    </form>
+    {%else%}
+    <form method="POST">
+        <h3 class="title-correct">What's the weather Like?</h3>
+        <div class="input-group correct">
           <div class="form-outline">
             <input
               type="search"
@@ -82,10 +85,8 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
-        {%endif%}
-      </form>
-    </div>
-
+      {%endif%}
+    </form>
     <!-- {% if weather: %} -->
     <div class="container-fluid">
       <div class="row justify-content-center">
