@@ -30,7 +30,6 @@ def home():
             return render_template('index.html', weather=weather, error=error)
         else:
             error=True
-            flash(message="Enter a Valid city")
             return render_template('index.html', weather=weather, error=error)
     return render_template('index.html', weather=weather, error=error)
 
